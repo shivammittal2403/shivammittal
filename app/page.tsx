@@ -19,7 +19,7 @@ const disciplines = [
 ];
 
 const certifications = [
-  'CISA / CISM (ISACA)', 'SOC 2 Academy', 'COSO Framework', 'Internal Audit',
+  'CISA / CISM — Professional Development', 'SOC 2 Academy', 'COSO Framework', 'Internal Audit',
   'Foundation Level Threat Intelligence Analyst', 'Mastering Threat Intelligence',
   'MITRE ATT&CK Defender — Purple Teaming Fundamentals', 'Certified Ethical Hacker (CEH)',
   'CompTIA PenTest+', 'Mobile Application Security Fundamentals', 'Digital Forensics Essentials',
@@ -29,6 +29,29 @@ const certifications = [
 
 const tools = ['Burp Suite', 'Nessus', 'Nmap', 'Metasploit', 'OWASP ZAP', 'OpenVAS', 'Nuclei', 'Wireshark', 'YARA', 'Sigma', 'Maltego', 'SpiderFoot', 'Shodan', 'Censys', 'VirusTotal', 'SecurityTrails'];
 
+const achievementImages = [
+  {
+    src: '/achievements/parliament-jagriti-03.jpg',
+    alt: 'Jagriti Residency cohort gathered at the Parliament complex in New Delhi',
+    caption: 'Jagriti Residency · Parliament visit',
+  },
+  {
+    src: '/achievements/parliament-jagriti-01.jpg',
+    alt: 'Jagriti Residency participants in a group photograph at Parliament',
+    caption: 'Cohort engagement at Parliament',
+  },
+  {
+    src: '/achievements/parliament-jagriti-02.jpg',
+    alt: 'Participants during the Jagriti Residency Parliament engagement',
+    caption: 'Learning alongside the Jagriti cohort',
+  },
+  {
+    src: '/achievements/jagriti-residency-04.jpg',
+    alt: 'Jagriti Residency participants during an institutional visit',
+    caption: 'Jagriti Residency field experience',
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -36,7 +59,7 @@ export default function Home() {
         <div className="grid-haze" aria-hidden="true" />
         <nav className="nav shell" aria-label="Primary navigation">
           <a className="monogram" href="#top" aria-label="Shivam Mittal, home">SM<span>.</span></a>
-          <div className="nav-links"><a href="#work">Work</a><a href="#expertise">Expertise</a><a href="#contact">Contact</a></div>
+          <div className="nav-links"><a href="#work">Work</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a></div>
         </nav>
         <div className="hero-inner shell">
           <div className="hero-copy">
@@ -44,12 +67,12 @@ export default function Home() {
             <h1>Security is a<br /><em>human system.</em></h1>
             <p className="hero-lede">I’m Shivam Mittal — a cyber security consultant working across GRC, threat intelligence, OSINT, VAPT and practical security education.</p>
             <div className="hero-actions">
-              <a className="primary-cta" href="#contact">Start a conversation <span aria-hidden="true">↗</span></a>
+              <a className="primary-cta linkedin-cta" href="https://www.linkedin.com/in/shivam-mittal2023/" target="_blank" rel="noreferrer"><b aria-hidden="true">in</b> Connect on LinkedIn <span aria-hidden="true">↗</span></a>
               <a className="text-link" href="/shivam-mittal-resume.pdf" target="_blank">View résumé <span>↗</span></a>
             </div>
             <div className="signal-row" aria-label="Professional links">
-              <a href="https://www.linkedin.com/in/shivam-mittal2023" target="_blank" rel="noreferrer">in&nbsp; LinkedIn</a>
               <a href="https://github.com/shivammittal2403" target="_blank" rel="noreferrer">&lt;/&gt;&nbsp; GitHub</a>
+              <a href="https://tryhackme.com/p/shivammittal2403" target="_blank" rel="noreferrer">◇&nbsp; TryHackMe</a>
               <span>⌖&nbsp; Sonipat, Haryana, India</span>
             </div>
           </div>
@@ -112,10 +135,63 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="achievements-section" id="achievements">
+        <div className="shell">
+          <div className="section-head achievement-head reveal-on-scroll">
+            <div><p className="section-kicker">Beyond the brief / 004</p><h2>Leadership in motion.</h2></div>
+            <p>Community, professional development and disciplined pursuits that extend the security practice beyond a conventional résumé.</p>
+          </div>
+
+          <div className="achievement-story reveal-on-scroll">
+            <div className="achievement-lead">
+              <span className="achievement-index">01 / JAGRITI</span>
+              <h3>Jagriti Residency<br />at Parliament.</h3>
+              <p>Worked with <strong>Jagriti Yatra as an ERC</strong> during the Jagriti Residency, contributing to a cohort-led learning experience that included an engagement at Parliament.</p>
+              <div className="achievement-tags"><span>Jagriti Yatra</span><span>ERC</span><span>Residency</span><span>Parliament</span></div>
+            </div>
+            <figure className="achievement-featured-image">
+              <img src="/achievements/parliament-jagriti-03.jpg" alt="Jagriti Residency cohort gathered at the Parliament complex in New Delhi" />
+              <figcaption><span>New Delhi</span><span>Jagriti Residency</span></figcaption>
+            </figure>
+          </div>
+
+          <div className="achievement-gallery reveal-on-scroll" aria-label="Jagriti Residency and Parliament gallery">
+            {achievementImages.slice(1).map((image) => (
+              <figure key={image.src}>
+                <img src={image.src} alt={image.alt} loading="lazy" />
+                <figcaption>{image.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
+
+          <div className="achievement-notes">
+            <article className="isaca-card reveal-on-scroll">
+              <div className="isaca-mark">ISACA<span>DELHI</span></div>
+              <div>
+                <p className="section-kicker">Professional membership</p>
+                <h3>ISACA Delhi Chapter Member</h3>
+                <p>Registered for the <strong>CPE Event and Special General Meeting (SGM)</strong> scheduled for 22 August 2026—an opportunity for CPE learning and engagement with fellow ISACA members and industry professionals.</p>
+              </div>
+            </article>
+            <article className="credential-focus reveal-on-scroll">
+              <p className="section-kicker">Governance focus</p>
+              <div className="credential-acronyms"><strong>CISA</strong><i>+</i><strong>CISM</strong></div>
+              <p>Professional development aligned with information systems audit and security management.</p>
+            </article>
+            <article className="shooting-card reveal-on-scroll">
+              <p className="section-kicker">Competitive discipline</p>
+              <span className="target-rings" aria-hidden="true" />
+              <h3>District-level<br />shooting</h3>
+              <p>District-level shooting participation—bringing focus, composure and precision beyond the cyber domain.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section className="development-section">
         <div className="shell development-grid">
           <div className="development-card reveal-on-scroll">
-            <p className="section-kicker">Professional development / 004</p>
+            <p className="section-kicker">Professional development / 005</p>
             <div className="dev-badge">GIP<span>2026</span></div>
             <h2>Global Innovators Program</h2>
             <p className="dev-org">NUS Business School · Full scholarship · Part-time virtual</p>
@@ -131,18 +207,18 @@ export default function Home() {
 
       <section className="credentials shell">
         <div className="section-head reveal-on-scroll">
-          <div><p className="section-kicker">Credentials / 005</p><h2>Continuous learning,<br />applied deliberately.</h2></div>
+          <div><p className="section-kicker">Credentials / 006</p><h2>Continuous learning,<br />applied deliberately.</h2></div>
           <p>Professional study across audit, governance, threat intelligence, offensive security, privacy and emerging AI risk.</p>
         </div>
         <div className="credential-cloud reveal-on-scroll">
-          {certifications.map((cert, index) => <span className={index % 5 === 0 ? 'hot' : ''} key={cert}>{cert}</span>)}
+          {certifications.map((cert, index) => <span className={index === 0 ? 'priority-credential' : index % 5 === 0 ? 'hot' : ''} key={cert}>{cert}</span>)}
         </div>
       </section>
 
       <section className="toolkit-section">
         <div className="shell toolkit-grid">
           <div className="reveal-on-scroll">
-            <p className="section-kicker">Toolkit / 006</p><h2>Methods meet machinery.</h2>
+            <p className="section-kicker">Toolkit / 007</p><h2>Methods meet machinery.</h2>
             <p>Hands-on with security testing, network analysis, intelligence tooling and automation across Kali Linux, Ubuntu and Windows.</p>
           </div>
           <div className="tool-orbit reveal-on-scroll">
@@ -154,7 +230,7 @@ export default function Home() {
       <section className="open-source shell reveal-on-scroll">
         <div className="github-panel">
           <div className="github-copy">
-            <p className="section-kicker">Public work / 007</p><h2>An open security notebook.</h2>
+            <p className="section-kicker">Public work / 008</p><h2>An open security notebook.</h2>
             <p>Shivam’s public GitHub footprint includes security resources, malware-analysis references and practical research material — connected to the same LinkedIn and TryHackMe identities listed in the CV.</p>
             <div className="github-actions">
               <a className="primary-cta" href="https://github.com/shivammittal2403" target="_blank" rel="noreferrer">Explore GitHub <span>↗</span></a>
@@ -172,15 +248,16 @@ export default function Home() {
       <section className="contact-section" id="contact">
         <div className="contact-rings" aria-hidden="true" />
         <div className="shell contact-inner reveal-on-scroll">
-          <p className="section-kicker">Secure the next move / 008</p>
+          <p className="section-kicker">Secure the next move / 009</p>
           <h2>Bring clarity to<br /><em>the unknown.</em></h2>
           <p>For consulting, training, research partnerships and security awareness programs.</p>
           <a className="contact-email" href="mailto:shivammittal2403@gmail.com">shivammittal2403@gmail.com <span>↗</span></a>
           <div className="contact-meta">
-            <a href="tel:+918685868620">+91 86858 68620</a>
+            <a href="https://www.linkedin.com/in/shivam-mittal2023/" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a>
             <a href="https://redkross.org.in" target="_blank" rel="noreferrer">redkross.org.in ↗</a>
             <span>English · Hindi</span>
           </div>
+          <p className="privacy-note">Public profile: professional contact and verified work links only. Sensitive personal details are not published.</p>
         </div>
       </section>
 
