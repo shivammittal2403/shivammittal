@@ -1,4 +1,15 @@
-# shivammittal
+# Shivam Mittal
+
+## Personal Portfolio
+
+- 🌐 [Live portfolio](https://shivam-mittal-portfolio.vercel.app/)
+- 💼 [LinkedIn](https://www.linkedin.com/in/shivam-mittal2023/)
+- 📄 [Résumé](https://shivam-mittal-portfolio.vercel.app/shivam-mittal-resume.pdf)
+
+---
+
+## Cybersecurity Resources
+
 Subdomain Enumeration
 Sublist3r (https://github.com/aboul3la/Sublist3r) - Fast subdomains enumeration tool for penetration testers
 Amass (https://github.com/OWASP/Amass) - In-depth Attack Surface Mapping and Asset Discovery
